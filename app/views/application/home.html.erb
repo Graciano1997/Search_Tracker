@@ -1,0 +1,13 @@
+<main class="homeMainContainer">
+<h1>Be welcome at <span>Helpjuice</span> Searcher</h1>
+<% unless current_user%>
+<div class="links">
+<%= link_to new_user_session_path do %>
+Login
+<%end%>
+<%= link_to new_user_registration_path do %>
+Create Acount
+<%end%>
+</div>
+<%end%>
+</main>
