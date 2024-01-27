@@ -114,7 +114,7 @@ button {
 }
 
 .formContainer {
-    margin-top: -15rem;
+    margin-top: -1rem;
 }
 
 .formContainer input {
@@ -206,3 +206,44 @@ button {
     font-size: 20px;
     font-weight: 700;
 }
+
+.searchResultsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+    background-color: white;
+    width: 52%;
+    height: 350px;
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+    border-radius: 16px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.searchResultsContainer div {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.055);
+    height: 150px;
+    width: 100%;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    font-size: 12px;
+    padding: 1rem;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgba(0, 0, 0, 0.658), rgba(61, 180, 164, 0.596));
+    border-radius: 16px;
+   }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 16px;
+  }
+  
