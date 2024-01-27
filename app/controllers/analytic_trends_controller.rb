@@ -1,0 +1,2 @@
+class AnalyticTrendsController < ApplicationController
+end
