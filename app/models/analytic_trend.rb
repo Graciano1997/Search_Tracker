@@ -1,0 +1,2 @@
+class AnalyticTrend < ApplicationRecord
+end
