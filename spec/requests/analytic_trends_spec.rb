@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "AnalyticTrends", type: :request do
-  describe "GET /index" do
+RSpec.describe 'AnalyticTrends', type: :request do
+  describe 'GET /index' do
     pending "add some examples (or delete) #{__FILE__}"
   end
 end

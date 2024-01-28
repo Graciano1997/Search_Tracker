@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     registrations: 'user/registrations'
   }
 
-  resources :searches, only: [:index, :create]
+  resources :searches, only: [:index]
   resources :analytic_trends, only: [:index, :create]
   get "/analytictrends", to: "analytic_trends#trends"
 end

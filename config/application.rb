@@ -23,5 +23,7 @@ module SearchTracker
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.middleware.use ActionDispatch::RemoteIp, 
+    ip_precedence: [/^X-Forwarded-For/, /^X-Real-IP/, /^Remote-IP/, /^Cf-Connecting-Ip/, /^True-Client-Ip/, /^X-Client-IP/]
   end
 end
