@@ -8,41 +8,31 @@ class AnalyticTrendsController < ApplicationController
   end
 
   def create
-    if params[:query]!=''
+    if params[:query] == ''
+      render json: { error: 'Invalid search term' }, status: :bad_request
+    else
       term = params[:query]
       ip_address = request.remote_ip
-        @search = Search.new
-        @search.query = term
-        @search.ip_address = ip_address
-        @search.save
-        if AnalyticTrend.exists?(AnalyticTrend.where(query: params[:query]))
-          @analytic_trend = AnalyticTrend.where(query: params[:query]).first
-          @analytic_trend.search_total += 1
-          @analytic_trend.save
-            # render json: { success: true, message: 'Increased Successfully!😁' }, status: :created
-          # else
-            # render json: { error: true, message: @analytic_trend.errors.full_messages }, status: :unprocessable_entity
-          # end
-        else
-          @analytic_trend = AnalyticTrend.new(analytic_trend_params)
-          @analytic_trend.search_total = 1
-          @analytic_trend.save
-            # render json: { success: true, message: 'Created Successfully!😁' }, status: :created
-          # else
-            # render json: { error: true, message: @analytic_trend.errors.full_messages }, status: :unprocessable_entity
-          # end
-        end
-        render json: { result: perform_search(term) }
+      @search = Search.new
+      @search.query = term
+      @search.ip_address = ip_address
+      @search.save
+      if AnalyticTrend.exists?(AnalyticTrend.where(query: params[:query]))
+        @analytic_trend = AnalyticTrend.where(query: params[:query]).first
+        @analytic_trend.search_total += 1
       else
-        render json: { error: 'Invalid search term' }, status: :bad_request
+        @analytic_trend = AnalyticTrend.new(analytic_trend_params)
+        @analytic_trend.search_total = 1
       end
+      @analytic_trend.save
+      render json: { result: perform_search(term) }
+    end
   end
 
   private
 
   def perform_search(term)
-    results = Article.where('title LIKE ?', "%#{term}%").pluck(:title)
-    results
+    Article.where('title LIKE ?', "%#{term}%").pluck(:title)
   end
 
   protected
