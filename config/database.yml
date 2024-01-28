@@ -82,5 +82,4 @@ test:
 #
 production:
   <<: *default
-  # database: search_tracker_production
-    url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
