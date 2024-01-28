@@ -1,29 +1,6 @@
+<%= javascript_include_tag 'modules/chartHandler' %>
 <section class="trendsContainer">
 <div class="graphContainer">
 <canvas id="myChart"></canvas>
 </div>
-<script>
-var xValues = ["What is a good car", "France", "Spain", "USA", "Argentina", "France", "Spain", "USA", "Argentina", "France", "Spain", "USA", "Argentina"];
-var yValues = [1000, 49, 44, 24, 15, 44, 24, 15, 44, 24, 15,50];
-var barColors = ["red", "green","blue","orange","brown"];
-
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "The People Searching Trends"
-    }
-  }
-});
-</script>
-
 </section>

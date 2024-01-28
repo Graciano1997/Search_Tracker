@@ -2,7 +2,9 @@ class AnalyticTrendsController < ApplicationController
     skip_before_action :verify_authenticity_token, only: %i[create]
     def index
     end
-    def show
+    def trends
+        @analiticTrends= AnalyticTrend.all
+        render json: {success: true, data:@analiticTrends}
     end
     def create    
       if AnalyticTrend.exists?(AnalyticTrend.where(query:params[:query]))
@@ -24,8 +26,6 @@ class AnalyticTrendsController < ApplicationController
         end
     end
     def destroy
-    end
-    def update
     end
 
     protected
