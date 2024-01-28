@@ -10,6 +10,26 @@ body {
   height: 100vh;
 }
 
+.links a {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.sharedLinks a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
 .homeMainContainer,
 .searchContainer,
 .loginContainer,
@@ -130,18 +150,6 @@ button {
   margin-top: 2rem;
 }
 
-.links a {
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0.5;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 16px;
-  text-decoration: none;
-  color: black;
-}
-
 .trendsContainer {
   display: flex;
   flex-direction: column;
@@ -166,14 +174,6 @@ button {
 .sharedLinks {
   margin-top: 0.5rem;
   font-weight: 700;
-}
-
-.sharedLinks a {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
 }
 
 .errorLinksContainer {
