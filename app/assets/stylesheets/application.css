@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.658), rgba(61, 180, 164, 0.596));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.homeMainContainer,
+.searchContainer,
+.loginContainer,
+.signUpContainer,
+.recoverPasswordContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.loginContainer input,
+.signUpContainer input,
+.recoverPasswordContainer input {
+  padding: 1rem;
+  border: transparent;
+  width: 120%;
+  border-radius: 8px;
+  outline: transparent;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+input[type="submit"],
+.loginContainer input[type="checkbox"],
+button {
+  cursor: pointer;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.sharedLinks a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.links a {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.loginContainer input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  border-radius: 8px;
+}
+
+.homeMainContainer h1 {
+  font-size: 60pt;
+  text-align: center;
+}
+
+.homeMainContainer h1 span {
+  color: white;
+}
+
+.headerContainer,
+.headerContainerFixed {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.headerContainer nav,
+.headerContainerFixed nav {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  gap: 0.5rem;
+  margin-right: 2rem;
+  padding-top: 0.5rem;
+}
+
+.headerContainer nav a,
+.headerContainerFixed nav a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.headerContainer nav a:hover,
+.headerContainerFixed nav a:hover {
+  padding: 0.3rem;
+  color: black;
+  background-color: white;
+}
+
+.headerContainerFixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.formContainer,
+.formContainer input {
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 1rem;
+  border: transparent;
+  outline: transparent;
+  width: 50%;
+}
+
+.formContainer {
+  margin-top: -1rem;
+}
+
+.formContainer input {
+  width: 100%;
+  font-size: 25px;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.trendsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* height: inherit; */
+}
+
+.graphContainer {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: white;
+  height: 50%;
+  width: 70%;
+  overflow: scroll;
+}
+
+.sharedLinks {
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.errorLinksContainer {
+  margin-bottom: 2rem;
+}
+
+.errorLinksContainer div {
+  display: flex;
+  flex-direction: column;
+}
+
+.errorLinksContainer div,
+.errorLinksContainer div ul {
+  color: white;
+}
+
+#logout a:hover {
+  background-color: rgb(202, 48, 48);
+  color: white;
+}
+
+.messageContainer {
+  margin-top: -5rem;
+  width: max-content;
+}
+
+.messageContainer p {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.searchResultsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  background-color: white;
+  width: 52%;
+  height: 350px;
+  padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+  border-radius: 16px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.searchResultsContainer div {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.055);
+  height: 150px;
+  width: 100%;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  margin-right: 1rem;
+  font-size: 12px;
+  padding: 1rem;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgba(0, 0, 0, 0.658), rgba(61, 180, 164, 0.596));
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 16px;
+}

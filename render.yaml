@@ -1,0 +1,22 @@
+databases:
+  - name: searcherApp
+    databaseName: searcherapp
+    user: searcherapp_user
+    plan: free
+
+services:
+  - type: web
+    name: searchertracker
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: searcherapp
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2
