@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   resources :searches, only: [:index]
   resources :analytic_trends, only: [:index, :create]
-  get "/analytictrends", to: "analytic_trends#trends"
+  get "/analytictrends", to: "analytic_trends#trends", default: {format: :json}
 end
