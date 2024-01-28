@@ -82,5 +82,4 @@ test:
 production:
   <<: *default
   database: search_tracker_production
-  username: search_tracker
   password: <%= ENV["SEARCH_TRACKER_DATABASE_PASSWORD"] %>

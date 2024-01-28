@@ -3,8 +3,8 @@ class AnalyticTrendsController < ApplicationController
   def index; end
 
   def trends
-    @analiticTrends = AnalyticTrend.all
-    render json: { success: true, data: @analiticTrends }
+    @analytic_trends = AnalyticTrend.all
+    render json: { success: true, data: @analytic_trends }
   end
 
   def create
